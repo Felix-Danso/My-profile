@@ -1,19 +1,26 @@
-/** @type {import('tailwindcss').Config} */
+// /** @type {import('tailwindcss').Config} */
 module.exports = {
+  purge:[],
+  darkMode:false,
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        'body': '#17171F',
+        'selected-text':'#A3A3FF'
+        'theme':'#3F3FFF',
+        'nav':'#404053',
+        'secondary':'#9191AA',
+        'badge':'#3F3F51',
+        'input-border':'#565666',
+        'input':'#2A2A35'
+      },
+      fontFamily:{
+         'poppins':["'poppins'",'sans-serif']
+      }
+    },
   },
-  plugins: [require("daisyui")],
-
-  daisyui: {
-    styled: true,
-    themes: true,
-    base: false,
-    utils: true,
-    logs: true,
-    rtl: false,
-    prefix: "",
-    darkTheme: "light",
+  variants:{
+    extend:{},
   },
 }
